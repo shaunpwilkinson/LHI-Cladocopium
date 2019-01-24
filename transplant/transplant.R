@@ -1,6 +1,6 @@
 ##################### Transplant experiment R script #####################
 
-setwd("~/Dropbox/PhD/Thesis components/Transplant study/Data/")
+setwd(dirname(file.choose()))
 x <- read.csv("transplant.csv", stringsAsFactors = FALSE)
 
 
@@ -286,8 +286,7 @@ p1 <- ggplot(z, aes(x = survived195, y = original_SIGV.STOTAL)) +
 p1
 
 setEPS()
-postscript("~/Dropbox/PhD/Thesis components/Transplant study/Figures/transplant_fig1.eps", 
-           width = 5, height = 5, family = "Times")
+postscript("transplant_fig1.eps", width = 5, height = 5, family = "Times")
 p1
 dev.off()
 
@@ -330,8 +329,7 @@ p2 <- ggplot(ytw, aes(x = time_of_retrieval, y = growth_rate_x.10.3.per_day_comp
 p2
 
 setEPS()
-postscript("~/Dropbox/PhD/Thesis components/Transplant study/Figures/transplant_fig2.eps", 
-           width = 5, height = 5, family = "Times")
+postscript("transplant_fig2.eps", width = 5, height = 5, family = "Times")
 p2
 dev.off()
 
@@ -358,8 +356,7 @@ p3 <- ggplot(y, aes(x = original_SIGV.STOTAL, y = SIGV.STOTAL, shape = time_of_r
 p3
 
 setEPS()
-postscript("~/Dropbox/PhD/Thesis components/Transplant study/Figures/transplant_fig3.eps", 
-           width = 5, height = 5, family = "Times")
+postscript("transplant_fig3.eps", width = 5, height = 5, family = "Times")
 p3
 dev.off()
 
